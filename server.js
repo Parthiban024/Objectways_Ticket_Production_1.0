@@ -72,7 +72,7 @@ employeeName, employeeId, emailId, systemNo, systemType, systemTypetwo, unitNo, 
     cc: 'parthiban@objectways.com',
     subject: `New Ticket from the employee ID ${req.body.employeeId}`,
     text: `Name: ${req.body.employeeName}\nEmail: ${req.body.emailId}\nMessage: ${req.body.description}`, // plain text body
-    html: `<p>Name: ${req.body.employeeName}</p><p>Email: ${req.body.emailId}</p><p>Issue: ${req.body.systemType}</p><p>Message: ${req.body.description}</p>` // html body
+    html: `<p>Name: ${req.body.employeeName}</p><p>Email: ${req.body.emailId}</p><p>Unit No: ${req.body.unitNo}</p><p>Floor No: ${req.body.floorNo}</p><p>System No: ${req.body.systemNo}</p><p>Issue: ${req.body.systemType}</p><p>Message: ${req.body.description}</p>` // html body
   }
   transpoter.sendMail(mailOptions, function (error, info) {
     if (err) {
